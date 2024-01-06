@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/repositoriesFragment">
+    <fragment
+        android:id="@+id/repositoriesFragment"
+        android:name="com.example.githubrepoviewervodafone.ui.repositories.RepositoriesFragment"
+        android:label="fragment_repositories"
+        tools:layout="@layout/fragment_repositories" >
+        <action
+            android:id="@+id/action_repositoriesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.githubrepoviewervodafone.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="owner"
+            app:argType="string" />
+        <argument
+            android:name="repo"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailsFragment_to_issuesFragment"
+            app:destination="@id/issuesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/issuesFragment"
+        android:name="com.example.githubrepoviewervodafone.ui.issues.IssuesFragment"
+        android:label="fragment_issues"
+        tools:layout="@layout/fragment_issues" >
+        <argument
+            android:name="owner"
+            app:argType="string" />
+        <argument
+            android:name="repo"
+            app:argType="string" />
+    </fragment>
+</navigation>

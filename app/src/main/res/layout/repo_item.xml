@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="5dp"
+    android:background="#CC000000">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewUser"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/profile"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewRepositoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageViewUser"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="Repository Name"/>
+
+    <TextView
+        android:id="@+id/textViewRepositoryDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRepositoryName"
+        android:layout_toEndOf="@id/imageViewUser"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:text="Repository Description"/>
+</RelativeLayout>
